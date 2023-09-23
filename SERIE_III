@@ -1,0 +1,28 @@
+import math
+
+def area_de_figura_circulo(radio):
+    return math.pi * radio ** 2
+
+def area_de_figura_rectangulo(largo, ancho):
+    return largo * ancho
+
+def area_de_figura_triangulo(base, altura):
+    return (base * altura) / 2
+
+def main():
+    if figura == "circulo":
+        for i, arg in enumerate(sys.argv[2:], start=1):
+            radio = float(arg.split("=")[1])
+            area = area_de_figura_circulo(radio)
+            print(f"Área circulo {i} = {area:.2f}")
+
+    elif figura == "rectangulo":
+        for i, arg in enumerate(sys.argv[2:], start=1):
+            parametros = arg.split(",")
+            largo = float(parametros[0].split("=")[1])
+            ancho = float(parametros[1].split("=")[1])
+            area = area_de_figura_rectangulo(largo, ancho)
+            print(f"Área rectangulo {i} = {area:.2f}")
+
+    elif figura == "triangulo":
+        
